@@ -11,7 +11,7 @@ yes | sudo pip install msgpack
 python3 setup.py clean --all install
 
 # used for rover command
-yes | sudo pip3 install pexpect
+#yes | sudo pip3 install pexpect
 
 # Install rover command
-sudo ln -s $FOLDER/rover.py /usr/local/bin/rover
+#sudo ln -s $FOLDER/rover.py /usr/local/bin/rover
