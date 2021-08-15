@@ -104,7 +104,8 @@ There are more commands used for starting and stoping services described in [thi
 ### To Install 
 
 ```
-$git clone https://github.com/stanfordroboticsclub/UDPComms.git
+#$git clone https://github.com/stanfordroboticsclub/UDPComms.git
+$git clone https://github.com/qdpupper/UDPComms.git
 $sudo bash UDPComms/install.sh
 ```
 
