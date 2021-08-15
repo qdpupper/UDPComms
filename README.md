@@ -1,5 +1,19 @@
 # UDPComms
 
+```
+    def send(self, obj):
+        """ Publish a message. The obj can be any nesting of standard python types """
+        msg = msgpack.dumps(obj, use_bin_type=False)
+        assert len(msg) < MAX_SIZE, "Encoded message too big!"
+        #self.sock.send(msg)
+        #changed by Juedongli
+        try:
+            self.sock.send(msg)
+        except:
+            print("error: self.sock.send(msg) ConnectionRefusedError")
+        
+```
+
 This is a simple library to enable communication between different processes (potentially on different machines) over a network using UDP. It's goals a simplicity and easy of understanding and reliability. It works for devices on the `10.0.0.X` subnet although this can easiliy be changed.
 
 Currently it works in python 2 and 3 but it should be relatively simple to extend it to other languages such as C (to run on embeded devices) or Julia (to interface with faster solvers).
